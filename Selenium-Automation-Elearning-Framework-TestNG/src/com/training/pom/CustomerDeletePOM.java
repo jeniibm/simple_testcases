@@ -83,8 +83,9 @@ private WebDriver driver;
 		Thread.sleep(3000);
 		Actual_str = this.success.getText();
 		Actual = Actual_str.replace("\n", "");
+		Actual = Actual.replace("×","");
 		System.out.println(Actual);
-		String Expected = "Success: You have modified customers!�";
+		String Expected = "Success: You have modified customers!×";
 		Assert.assertEquals(Actual,Expected);
 	}
 
